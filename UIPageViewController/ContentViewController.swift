@@ -1,10 +1,3 @@
-//
-//  ContentViewController.swift
-//  UIPageViewController
-//
-//  Created by Андрей Терентьев on 28.04.2025.
-//
-
 import UIKit
 
 class ContentViewController: UIViewController {
@@ -13,23 +6,23 @@ class ContentViewController: UIViewController {
     @IBOutlet var emojiLabel: UILabel!
     @IBOutlet var pageControl: UIPageControl!
     
+    var presentText = ""
+    var emoji = ""
+    var currentPage = 0
+    var numberOfPages = 0
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        presentTextLabel.text = presentText
+        emojiLabel.text = emoji
+        pageControl.currentPage = currentPage
+        pageControl.numberOfPages = numberOfPages
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
