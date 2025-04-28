@@ -13,6 +13,8 @@
 		F3AED58C2DBFB1CB006ABFF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AED58A2DBFB1CB006ABFF1 /* Main.storyboard */; };
 		F3AED58E2DBFB1D1006ABFF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3AED58D2DBFB1D1006ABFF1 /* Assets.xcassets */; };
 		F3AED5912DBFB1D1006ABFF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AED58F2DBFB1D1006ABFF1 /* LaunchScreen.storyboard */; };
+		F3AED5992DBFB528006ABFF1 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AED5982DBFB528006ABFF1 /* ContentViewController.swift */; };
+		F3AED59C2DBFB58B006ABFF1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AED59B2DBFB58B006ABFF1 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		F3AED58D2DBFB1D1006ABFF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3AED5902DBFB1D1006ABFF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3AED5922DBFB1D1006ABFF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3AED5982DBFB528006ABFF1 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		F3AED59B2DBFB58B006ABFF1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				F3AED5842DBFB1CB006ABFF1 /* AppDelegate.swift */,
 				F3AED5862DBFB1CB006ABFF1 /* SceneDelegate.swift */,
 				F3AED5882DBFB1CB006ABFF1 /* ViewController.swift */,
+				F3AED5982DBFB528006ABFF1 /* ContentViewController.swift */,
+				F3AED59B2DBFB58B006ABFF1 /* PageViewController.swift */,
 				F3AED58A2DBFB1CB006ABFF1 /* Main.storyboard */,
 				F3AED58D2DBFB1D1006ABFF1 /* Assets.xcassets */,
 				F3AED58F2DBFB1D1006ABFF1 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3AED5992DBFB528006ABFF1 /* ContentViewController.swift in Sources */,
+				F3AED59C2DBFB58B006ABFF1 /* PageViewController.swift in Sources */,
 				F3AED5892DBFB1CB006ABFF1 /* ViewController.swift in Sources */,
 				F3AED5852DBFB1CB006ABFF1 /* AppDelegate.swift in Sources */,
 				F3AED5872DBFB1CB006ABFF1 /* SceneDelegate.swift in Sources */,
@@ -302,9 +310,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = study..UIPageViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,9 +341,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = study..UIPageViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
