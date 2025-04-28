@@ -13,6 +13,8 @@ class PageViewController: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        dataSource = self
 
         if let contentViewController = showViewControllerAtIndex(0) {
             setViewControllers([contentViewController], direction: .forward, animated: true)
@@ -32,4 +34,31 @@ class PageViewController: UIPageViewController {
         
         return contentViewController
     }
+}
+
+extension PageViewController: UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerBefore viewController: UIViewController)
+    -> UIViewController? {
+        
+        var pageNumber = (viewController as! ContentViewController).currentPage
+        pageNumber -= 1
+        
+        return showViewControllerAtIndex(pageNumber)
+        
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            viewControllerAfter viewController: UIViewController)
+    -> UIViewController? {
+        
+        var pageNumber = (viewController as! ContentViewController).currentPage
+        pageNumber += 1
+        
+        return showViewControllerAtIndex(pageNumber)
+        
+    }
+    
+    
+    
 }
