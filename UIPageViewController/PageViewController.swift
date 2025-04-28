@@ -14,7 +14,9 @@ class PageViewController: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        if let contentViewController = showViewControllerAtIndex(0) {
+            setViewControllers([contentViewController], direction: .forward, animated: true)
+        }
     }
     
     func showViewControllerAtIndex(_ index: Int) -> ContentViewController? {
