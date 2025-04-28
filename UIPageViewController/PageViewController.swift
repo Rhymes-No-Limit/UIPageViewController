@@ -6,10 +6,11 @@ class PageViewController: UIPageViewController {
     "Первая страница презентации, рассказывает о том, что наше приложение из себя представляет",
     "Вторая страница презентации, рассказывает о какой-то удобной фишке приложения",
     "Третья страница презентации тоже рассказывает о чем-то очень интересном",
-    "Ну и наконец последняя страница презентации с напутствием в добрый путь =)"
+    "Ну и наконец последняя страница презентации с напутствием в добрый путь =)",
+    ""
     ]
     
-    let emojiArray = ["😉", "🤓", "🧐", "👍"]
+    let emojiArray = ["😉", "🤓", "🧐", "👍", ""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,11 @@ class PageViewController: UIPageViewController {
     func showViewControllerAtIndex(_ index: Int) -> ContentViewController? {
         
         guard index >= 0 else { return nil }
-        guard index < presentScreenContent.count else { return nil }
+        guard index < presentScreenContent.count else {
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(true, forKey: "presentationWasViewed")
+            dismiss(animated: true, completion: nil)
+            return nil }
         guard let contentViewController = storyboard?.instantiateViewController(withIdentifier: "ContentViewController") as? ContentViewController else { return nil }
         
         contentViewController.presentText = presentScreenContent[index]
